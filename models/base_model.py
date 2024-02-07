@@ -6,7 +6,7 @@ import uuid
 from datetime import datetime
 
 class BaseModel:
-    def __init__(self)
+    def __init__(self):
         self.id = str(uuid.uuid4())
 
         self.created_at = datetime.utcnow()
@@ -30,9 +30,9 @@ class BaseModel:
     def __str__(self):
         """
         """
-        class_name = self.__class__.name__
+        class_name = self.__class__.__name__
       
-        return "[{}] ({}) {}".format(class_name, self_id,self.__dict__)
+        return "[{}] ({}) {}".format(class_name, self.id,self.__dict__)
 
 if __name__ == '__main__':
     my_model = BaseModel()
